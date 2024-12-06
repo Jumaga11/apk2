@@ -13,9 +13,27 @@ setInterval(() => {
 }, 3000);
 
 // Hamburger Menu
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.nav');
+const hamburger = document.getElementById('hamburger');
+const sidebar   = document.getElementById('sidebar');
 
 hamburger.addEventListener('click', () => {
-    nav.classList.toggle('show');
+    sidebar.classList.toggle('show');
 });
+
+
+
+
+
+
+/** ----------------------------------------------------------------------
+ * VOY A TRABAJAR LO QUE TENGO QUE HACER DE JAVASCRIPT SOBRE ESTE BLOQUE
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+-------------------------------------------------------------------------*/
