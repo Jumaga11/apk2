@@ -13,12 +13,10 @@ setInterval(() => {
 }, 3000);
 
 // Hamburger Menu
-const hamburger = document.getElementById('hamburger');
-const sidebar   = document.getElementById('sidebar');
-
-hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('show');
-});
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+}
 
 
 
