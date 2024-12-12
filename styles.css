@@ -9,11 +9,16 @@ li {
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 /* Header */
 
 .header {
     background: #ffffff;
-    color: #ffffff;
+    color: #000000;
     padding: 10px 20px;
     z-index: 1000;
     display: flex;
@@ -43,7 +48,7 @@ li {
 }
 
 .nav-list a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-size: 22px;
 }
@@ -68,7 +73,7 @@ div.container.header-container {
 .menu {
     display: none;
     flex-direction: column;
-    background: #0fa728;
+    background: #128e27;
     position: absolute;
     top: 100%;
     right: 0;
@@ -110,7 +115,7 @@ div.container.header-container {
 - - - - - - - - - - - - - -*/
 .hero {
     position: relative;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,80 +161,71 @@ div.container.header-container {
 - - - - - - - - - - - - - - - - 
 */
 
-section.abstract {
-    border: solid 2px #00ca23;
-    margin: 10px;
-}
-
-div.abstract {
-    border: solid red 2px;
-    margin: 10px;
-    padding: 10px;
-}
-
 /* - - - - - - - - - - - - - -  
 - - - - -INRODUCCION - - - - -    
 - - - - - - - - - - - - - - -*/
-
-section.introduction {
-    border: solid 2px #dc00a2;
-    margin: 2rem;
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 1.5rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
-div.introduction {
-    border: solid rgb(173, 195, 25) 2px;
-    margin: 10px;
+.carta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-block: 20px;
 }
 
-.introduction-card {
-    width: 100%;
-    height: 200px;
-    perspective: 1000px;
-    padding: 10px;
+.cards .red {
+    background: linear-gradient(300deg, #00ff75 0%,#2c9600 50%, #0c3400 100%);
 }
 
-.introduction-card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.999s;
+.cards .blue {
+    background: linear-gradient(300deg, #00ff75 0%,#2c9600 50%, #0c3400 100%);
 }
 
-.introduction-card:hover .introduction-card-inner {
-    transform: rotateY(180deg);
+.cards .green {
+    background: linear-gradient(300deg, #00ff75 0%,#2c9600 50%, #0c3400 100%);
 }
 
-.introduction-card-front,
-.introduction-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.introduction-card-front {
-    background-color: #6A2C70;
-    color: #fff;
+.cards .carta {
     display: flex;
     align-items: center;
-    border: 10px solid #6A2C70;
-    border-radius: 10px;
     justify-content: center;
-    font-size: 24px;
-    transform: rotateY(0deg);
+    flex-direction: column;
+    text-align: justify;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
 }
 
-.introduction-card-back {
-    background-color: #F08A5D;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    border: 10px solid #F08A5D;
-    border-radius: 10px;
-    justify-content: center;
-    font-size: 24px;
-    transform: rotateY(180deg);
+.cards .carta p.tip {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cards .carta p.second-text {
+    font-size: 18px;
+}
+
+.cards .carta:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.cards:hover>.carta:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
 }
 
 /* - - - - - - - - - - - - - -  
@@ -252,7 +248,8 @@ div.objetive {
 .objetives-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .card {
@@ -269,10 +266,10 @@ div.objetive {
     height: 300px;
     background-color: #1a1a1a;
     transition: all .2s;
-    ;
     padding-top: 0.5px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .card2:hover {
@@ -281,28 +278,21 @@ div.objetive {
 }
 
 .card:hover {
-    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-}
-
-.objetivo1 {
-    color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    box-shadow: 5px 5px 40px 3px rgba(0, 255, 117, 0.30);
 }
 
 .objetivo {
     color: #fff;
     text-align: justify;
-    padding-left: 30px;
-    padding-right: 30px;
-    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
     align-items: center;
 }
 
 /* CONTENEDOR DE FONDO DE OBJETIVOS */
 #objetivos {
     padding: 50px 20px;
-    background-color: #2f2c2c;
+    background-color: #242424;
     text-align: center;
 }
 
@@ -322,9 +312,76 @@ div.objetive {
 /* - - - - - - - - - - - - - -  
 - - - - - DESCRPCION - - - - -    
 - - - - - - - - - - - - - - -*/
+.description {
+    padding: 0 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
 
+.description-card {
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+    margin:auto;
+}
 
+.description-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
 
+.description-card:hover
+.description-card-inner {
+    transform: rotateY(180deg);
+    
+}
+
+.description-card-front,
+.description-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  
+}
+
+.description-card-back {
+    p.text {
+        display: flex;
+        font-size: 16px;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        padding: 1.8rem;
+        text-align: justify;
+    }
+}
+
+.description-card-front {
+    background: linear-gradient(10deg, #00ff75 0%,#2c9600 50%, #0c3400 100%);
+    color: #061702;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+}
+
+.description-card-back {
+    background-color: #beff90;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+} 
 
 /* - - - - - - - - - - - - - -  
 - - PLANTEAMIENTO PROBLEMA - -    
@@ -373,6 +430,14 @@ div.objetive {
     }
 
     .card2 {
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .carta {
         width: 100%;
     }
 
