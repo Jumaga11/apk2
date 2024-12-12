@@ -48,7 +48,7 @@ body {
 }
 
 .nav-list a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-size: 22px;
 }
@@ -296,10 +296,8 @@ div.objetive {
     text-align: center;
 }
 
-.objetivos-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+.especific {
+    color: #fff;
 }
 
 .objetivos-grid {
@@ -317,7 +315,7 @@ div.objetive {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 25vh;
 }
 
 .description-card {
@@ -387,20 +385,65 @@ div.objetive {
 - - PLANTEAMIENTO PROBLEMA - -    
 - - - - - - - - - - - - - - -*/
 
+.slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
+.slide2 {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+}
 
+.slide-content {
+    padding: 20px;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.0);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn.left {
+    left: -10px;
+}
+
+.nav-btn.right {
+    right: -10px;
+}
 
 /* - - - - - - - - - - - - - -  
-- - - - - - ALCANCE - - - - - -    
+- - - - - - FOOTER - - - - - -    
 - - - - - - - - - - - - - - -*/
 
-
-
-
-
-/* - - - - - - - - - - - - - -  
-- - - - - - IMPACTO - - - - - -    
-- - - - - - - - - - - - - - -*/
+.footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
 
 
 /* Responsive */
@@ -450,5 +493,23 @@ div.objetive {
     .header-container {
         display: flex;
         flex-direction: row;
+    }
+
+    .description-card {
+        width: 100%;
+        height: 600px;
+        perspective: 1000px;
+        margin:auto;
+    }
+    .description {
+        height: 80vh;
+    }
+
+    .slide-content {
+        padding: 10px;
+    }
+
+    .slider {
+        height: 500px;
     }
 }

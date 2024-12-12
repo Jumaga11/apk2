@@ -86,7 +86,7 @@
 
     <!-- Sección de objetivos -->
     <section id="objetivos" class="objetives">
-        <h2>Objetivos especificos</h2>
+        <h2 class="especific">Objetivos especificos</h2>
         <div class="objetives-container">
             <div class="card">
                 <div class="card2">
@@ -151,52 +151,47 @@
         </div>
     </section>
 
-    <br><br><br><br>
+  <br><br><br>
 
     <!-- Planteamiento del problema -->
-    <section id="problema" class="problem">
-        <h2>Planteamiento del problema</h2>
-        <div class="problem-container">
-            <div class="problem-item">
-                <blockquote>"Desde que implementamos este sistema, nuestros procesos son mucho más eficientes."
-                </blockquote>
-                <p>- Coordinador de Logística, Centro Técnico</p>
-            </div>
-            <div class="problem-item">
-                <blockquote>"La interfaz es muy intuitiva y ahorra mucho tiempo en la gestión diaria."</blockquote>
-                <p>- Instructor de Construcción, Centro Educativo</p>
+    <section id="slider" class="slider">
+        <!-- Slide 1 -->
+        <div class="slide2" id="problema">
+            <div class="slide-content">
+                <h2>Planteamiento del problema</h2>
+                <p>La gestión manual de inventarios en el CPIC es ineficiente y genera irregularidades. Es urgente una transformación digital para optimizar procesos, garantizar eficiencia, satisfacer necesidades y mejorar el control logístico y la transparencia.
+                </p>
             </div>
         </div>
-    </section>
-
-    <br><br><br><br>
-
-    <section id="alcance" class="range">
-        <div class="range-container">
-            <h1>Alcance</h1>
+        <!-- Slide 2 -->
+        <div class="slide2" id="alcance">
+            <div class="slide-content">
+                <h1>Alcance</h1>
+                <p>El sistema estará diseñado para adaptarse a las necesidades del SENA y su infraestructura, y será escalable para incorporar futuras ampliaciones o modificaciones según los cambios en la oferta educativa o en los recursos utilizados.</p>
+            </div>
         </div>
-    </section>
-
-    <br><br><br><br>
-
-    <section id="impacto" class="impact">
-        <div class="impact-container">
-            <h1>Impacto</h1>
+        <!-- Slide 3 -->
+        <div class="slide2" id="impacto">
+            <div class="slide-content">
+                <h1>Impacto</h1>
+                <p>Nuestro sistema ofrece una gestión más ágil y eficiente al automatizar los procesos, mejorando la eficiencia operativa. Al reducir los errores humanos y las pérdidas de materiales, se logra un control más preciso. Con información actualizada, facilita una planificación y toma de decisiones más efectivas</p>
+            </div>
         </div>
+        <!-- Navigation Buttons -->
+        <button class="left nav-btn" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="right nav-btn" onclick="moveSlide(1)">&#10095;</button>
     </section>
+
+    <!-- Navigation buttons -->
+    <button class="left nav-btn" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="right nav-btn" onclick="moveSlide(1)">&#10095;</button>
 
     <br><br><br>
 
     <!-- footer -->
     <footer id="contacto" class="footer">
         <div class="container footer-container">
-            <h2>Contáctanos</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo Electrónico" required>
-                <textarea placeholder="Mensaje" required></textarea>
-                <button type="submit" class="btn btn-secondary">Enviar</button>
-            </form>
+            <p>S G I A 2024 &COPY; Todos los derechos reservados</p>
         </div>
     </footer>
 

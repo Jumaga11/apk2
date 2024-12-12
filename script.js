@@ -17,21 +17,22 @@ function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
 }
-
-
-
-
-
-
 /** ----------------------------------------------------------------------
  * VOY A TRABAJAR LO QUE TENGO QUE HACER DE JAVASCRIPT SOBRE ESTE BLOQUE
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
 -------------------------------------------------------------------------*/
+
+let currentSlide2 = 0;
+const slides2 = document.querySelectorAll('.slide2');
+
+function moveSlide(direction) {
+    // Actualizamos el índice de la diapositiva actual
+    currentSlide2 = (currentSlide2 + direction + slides2.length) % slides2.length;
+
+    // Calculamos el desplazamiento para mostrar la diapositiva actual
+    const offset = -currentSlide2 * 100;
+
+    // Aplicamos la transformación a cada diapositiva
+    slides2.forEach(slide => {
+        slide.style.transform = `translateX(${offset}%)`;
+    });
+}
