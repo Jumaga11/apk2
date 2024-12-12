@@ -1,5 +1,8 @@
 /* Reset */
-body, h1, ul, li {
+body,
+h1,
+ul,
+li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +12,7 @@ body, h1, ul, li {
 /* Header */
 
 .header {
-    background: #ffffff; 
+    background: #ffffff;
     color: #ffffff;
     padding: 10px 20px;
     z-index: 1000;
@@ -32,16 +35,19 @@ body, h1, ul, li {
     display: flex;
     margin-left: auto;
 }
+
 .nav-list {
     display: flex;
     gap: 20px;
     list-style: none;
 }
+
 .nav-list a {
     color: #000000;
     text-decoration: none;
     font-size: 22px;
 }
+
 div.container.header-container {
     display: flex;
     align-items: center;
@@ -58,6 +64,7 @@ div.container.header-container {
     font-size: 50px;
     display: none;
 }
+
 .menu {
     display: none;
     flex-direction: column;
@@ -71,25 +78,31 @@ div.container.header-container {
     transform: translateY(-20px);
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 10px;
+    ;
 }
+
 .menu.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
+
 .menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .menu-list a {
     color: white;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
 }
+
 .menu-list a:hover {
-    background-color: #575757;
+    background-color: #33f50c;
 }
 
 /* - - - - - - - - - - - - -
@@ -97,22 +110,27 @@ div.container.header-container {
 - - - - - - - - - - - - - -*/
 .hero {
     position: relative;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #ffffff;
-    padding: 0 20px; /* Añadir padding para el margen */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Añadir sombreado */
+    padding: 0 20px;
+    /* Añadir padding para el margen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Añadir sombreado */
 }
 
 .hero-slider {
-    width: calc(100% - 40px); /* Ajustar el ancho para respetar el margen */
-    height: calc(100% - 40px); /* Ajustar la altura para respetar el margen */
+    width: calc(100% - 40px);
+    /* Ajustar el ancho para respetar el margen */
+    height: calc(100% - 40px);
+    /* Ajustar la altura para respetar el margen */
     position: absolute;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Añadir sombreado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Añadir sombreado */
 }
 
 .hero-slider .slide {
@@ -140,8 +158,9 @@ div.container.header-container {
 
 section.abstract {
     border: solid 2px #00ca23;
-    margin: 10px;  
+    margin: 10px;
 }
+
 div.abstract {
     border: solid red 2px;
     margin: 10px;
@@ -154,12 +173,63 @@ div.abstract {
 
 section.introduction {
     border: solid 2px #dc00a2;
-    margin: 10px;  
+    margin: 2rem;
 }
+
 div.introduction {
     border: solid rgb(173, 195, 25) 2px;
     margin: 10px;
+}
+
+.introduction-card {
+    width: 100%;
+    height: 200px;
+    perspective: 1000px;
     padding: 10px;
+}
+
+.introduction-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.introduction-card:hover .introduction-card-inner {
+    transform: rotateY(180deg);
+}
+
+.introduction-card-front,
+.introduction-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.introduction-card-front {
+    background-color: #6A2C70;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #6A2C70;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+}
+
+.introduction-card-back {
+    background-color: #F08A5D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #F08A5D;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
 }
 
 /* - - - - - - - - - - - - - -  
@@ -167,8 +237,9 @@ div.introduction {
 - - - - - - - - - - - - - - -*/
 section.objetive {
     border: solid 2px #850def;
-    margin: 10px;  
+    margin: 10px;
 }
+
 div.objetive {
     border: solid rgb(5, 177, 216) 2px;
     margin: 10px;
@@ -183,35 +254,42 @@ div.objetive {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .card {
     margin-top: 3rem;
     width: 300px;
     height: 300px;
     background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
     border-radius: 20px;
-    transition: all .3s;   
+    transition: all .3s;
 }
+
 .card2 {
     width: 300px;
     height: 300px;
     background-color: #1a1a1a;
-    transition: all .2s;;   
-    padding-top: 0.5px; 
+    transition: all .2s;
+    ;
+    padding-top: 0.5px;
     display: flex;
     flex-direction: column;
 }
+
 .card2:hover {
     transform: scale(0.98);
     border-radius: 20px;
 }
+
 .card:hover {
     box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
+
 .objetivo1 {
     color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .objetivo {
     color: #fff;
     text-align: justify;
@@ -227,11 +305,13 @@ div.objetive {
     background-color: #2f2c2c;
     text-align: center;
 }
+
 .objetivos-title {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
 }
+
 .objetivos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -268,33 +348,40 @@ div.objetive {
 
 /* Responsive */
 @media (max-width: 768px) {
-    
+
     .nav {
         display: none;
     }
+
     .hamburguer {
         display: block;
-        margin: auto;
+        margin-left: auto;
     }
+
     .menu {
         display: flex;
     }
+
     .objetives-container {
         flex-direction: column;
         align-items: center;
     }
+
     .card {
         width: 100%;
         margin-top: 1rem;
     }
+
     .card2 {
         width: 100%;
     }
-    .container{
+
+    .container {
         display: flex;
         align-items: center;
         gap: 10px;
     }
+
     .header-container {
         display: flex;
         flex-direction: row;
