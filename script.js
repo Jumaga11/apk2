@@ -17,6 +17,11 @@ function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
 }
+
+function closeMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.remove('show');
+}
 /** ----------------------------------------------------------------------
  * VOY A TRABAJAR LO QUE TENGO QUE HACER DE JAVASCRIPT SOBRE ESTE BLOQUE
 -------------------------------------------------------------------------*/

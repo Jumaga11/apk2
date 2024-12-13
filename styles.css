@@ -68,15 +68,19 @@ div.container.header-container {
     color: #0fa728;
     font-size: 50px;
     display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
 }
 
 .menu {
     display: none;
     flex-direction: column;
     background: #128e27;
-    position: absolute;
-    top: 100%;
-    right: 0;
+    position: fixed;
+    top: 70px;
+    right: 10px;
     width: 200px;
     padding: 10px 0;
     opacity: 0;
@@ -84,7 +88,7 @@ div.container.header-container {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     border-radius: 10px;
-    ;
+    z-index: 999;
 }
 
 .menu.show {
